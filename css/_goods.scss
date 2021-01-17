@@ -1,0 +1,103 @@
+.goods {
+
+
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+        margin-bottom: 90px;
+        margin-top: 65px;
+    }
+
+    &__block {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            color: #3D3D3D;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 90px;
+            }
+
+        }
+
+        &-list {
+            @extend %space-between;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img {
+
+            width: 100%;
+
+            max-width:
+                288px;
+        }
+
+        &-text {
+            width: 85%;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        &-price {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+
+            color: #B05179;
+            margin-top: 9px;
+
+        }
+
+        &-button {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+            background: #6245B1;
+            border-radius: 5px;
+            padding: 8px 13px;
+            margin-top: 14px;
+
+
+
+        }
+    }
+
+}
+
+.goods__card {
+    margin-right: 24px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,79 @@
+@media screen and (max-width:800px) {
+    .header {
+        height: 100vh;
+
+        &__top {
+            justify-content: space-around;
+            padding-top: 38px;
+        }
+
+        &__title {
+            font-size: 85px;
+
+            &-info {
+                font-size: 15px;
+                margin-top: 170px;
+            }
+        }
+
+        &__menu {
+            width: auto;
+
+            &-item {
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+
+        &__select {
+            &-wrap {
+                width: 30%;
+            }
+        }
+
+
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .catalog {
+        display: none;
+    }
+
+    .goods,
+    .service,
+    .footer {
+        display: none;
+    }
+
+    .header {
+        &__hero {
+            &-button {
+                padding: 12.5px 25px;
+                font-size: 18px;
+            }
+        }
+
+        &__title {
+            font-size: 45px;
+
+            &-info {
+                display: none;
+            }
+        }
+    }
+}

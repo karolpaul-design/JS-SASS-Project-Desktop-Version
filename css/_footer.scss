@@ -1,0 +1,132 @@
+.footer {
+    color: #FFFFFF;
+    background-color: $main-dark;
+    background-image: url('../img/Rectangle64.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__title,
+    &__title-info {
+        @extend %space-between;
+        flex-direction: column;
+    }
+
+    &__title-info {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        letter-spacing: 0.75em;
+        text-transform: uppercase;
+
+
+
+        mix-blend-mode: normal;
+        padding-top: 68px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 88px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+
+
+        mix-blend-mode: normal;
+    }
+
+    &__list {
+        @extend %space-between;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-top: 50px ;
+        padding-bottom: 150px;
+
+        &-title {
+            font-family: Calibri;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+margin-bottom:17px;
+        }
+    }
+
+    &__social {
+        &-img{
+            margin-right:10px;
+            
+        }
+        &-item{
+            margin-bottom:16px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &-link {
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 21px;
+            /* identical to box height */
+            
+        }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+
+        &-tel {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            /* identical to box height */
+
+            text-transform: uppercase;
+            &:last-of-type{
+                margin-top:8px;
+            }
+        }
+
+        &-button {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+
+            color: #000000;
+            padding: 17.5px 32px;
+            background: #FFFFFF;
+            border-radius: 5px;
+            margin-top: 16px;
+        }
+    }
+
+    &__menu{
+        &-link{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            
+            color: #FFFFFF;
+
+        }
+        &-item{
+            margin-top: 16px;
+        }
+    }
+}

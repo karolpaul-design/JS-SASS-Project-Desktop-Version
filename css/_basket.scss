@@ -1,0 +1,131 @@
+.basket {
+
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+
+    &__title-empty {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    &__wrap {
+        background-color: white;
+        color: black;
+        width: 80%;
+        width: 100%;
+        max-width: 1254px;
+
+        box-sizing: border-box;
+
+        margin: 0 auto;
+        border-radius: 10px;
+        margin: 30px;
+    }
+
+    &__top-wrap {
+        padding: 15px 25px;
+        @extend %space-between;
+    }
+
+    &__icon-top-img {
+        width: 13px;
+    }
+
+    &__goods-item {
+        padding: 15px 0;
+        border-bottom: 1px solid black;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__card {
+        &-icon {
+            align-self: flex-start;
+
+            &-img {
+                width: 10px;
+            }
+        }
+
+        &-img {
+            height: 200px;
+        }
+
+        &-total {
+            margin-right: 30px;
+        }
+    }
+
+    &__goods-wrap {
+        padding: 0 25px;
+        height: 440px;
+        overflow: auto;
+    }
+
+    &__card__top-wrap {
+        display: flex;
+        flex-direction: row;
+        @extend %space-between;
+    }
+
+    &__card__footer-wrap {
+        display: flex;
+        flex-direction: row;
+        @extend %space-between;
+        justify-content: flex-end;
+    }
+
+    &__footer {
+        @extend %space-between;
+        padding: 15px 25px;
+
+        &-sum-wrap {
+            @extend %space-between;
+
+        }
+
+        &-exitBtn {
+            background-color: white;
+            border: 1px solid black;
+            padding: 21px 28px;
+            border-radius: 4px;
+        }
+
+        &-sum {
+            margin-left: 10px;
+
+            &Btn {
+                background-color:#ede8e8;
+                border: 1px solid black;
+                padding: 10px 15px;
+                border-radius: 4px;
+                margin: 0 0 0 45px;
+                
+            }
+
+            &-wrap {
+                padding: 10px 10px 10px 20px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.card-button {
+    &:disabled {
+        opacity: 0.5;
+    }
+}

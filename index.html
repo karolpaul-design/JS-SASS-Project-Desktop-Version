@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUMMI.PRINT</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="body">
+    <header class="header"><a name="main"></a>
+        <div class="container header__container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <span class="header__logo-link">Gummi.Print</span>
+                </div>
+                <nav class="header__navigation">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="" class="header__menu-link header--active">Главная</a>
+                        </li>
+                        <li class="header__menu-item"><a href="#about" class="header__menu-link dis">О нас</a></li>
+                        <li class="header__menu-item"><a href="#contacts" class="header__menu-link dis">Контакты</a></li>
+                        <li class="header__menu-item"><a href="#catalog" class="header__menu-link dis">Каталог</a></li>
+                    </ul>
+                </nav>
+                <div class="header__top-button-wrap">
+                    <button id="buttonTop" class="button header__top-button">Позвонить</button>
+                    <div id="topButtonContent" class="header__top-button-content hidden">
+                        <span class="top-button-content__title">Мы вам перезвоним</span>
+                        <input type="text" class="top-button-content__inputName" placeholder="Имя">
+                        <input type="text" class="top-button-content__inputPhone" placeholder="Номер телефона">
+                        <button class="top-button-content__button">Заказать звонок</button>
+                        <span class="top-button-content__phone-title">Наши контакты</span>
+                        <span class="top-button-content__phone">+38(099) 386 74 53</span>
+                        <span class="top-button-content__phone">+38(099) 386 74 53</span>
+                    </div>
+                </div>
+                <div class="header__select-wrap">
+
+                    <button id="selectCity" class="header__select">
+                        <a href="#" class="header__select-icon-link--b"><img src="img/Polygon1.svg" alt=""
+                                class="header__select-icon-img--b"></a>
+                        <span class="header__select-city">Москва</span>
+
+
+
+
+
+                        <a href="#" class="header__select-icon-link--a"><img src="img/Tringle.svg" alt=""
+                                class="header__select-icon-img--a"></a>
+
+                    </button>
+                    <ul id="topSelectContent" class="header__select-content hidden">
+                        <li class="header__select-item"><a href=""
+                                class="header__select-link header__select-link1">Питер</a></li>
+                        <li class="header__select-item"><a href=""
+                                class="header__select-link header__select-link2">Казань</a></li>
+                        <li class="header__select-item"><a href=""
+                                class="header__select-link header__select-link3">Сочи</a></li>
+                        <li class="header__select-item"><a href=""
+                                class="header__select-link header__select-link4">Ростов</a></li>
+
+                    </ul>
+
+                </div>
+                <div id="basketBtn" class="header__icon-wrap">
+                    <a  href="" class="header__icon-link">
+                        <!-- <img src="img/Group143.svg" alt="" class="header__icon-img"> -->
+                        <span class="header__icon-quantity">3</span>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="basket slideOutLeft">
+                <div class="basket__wrap">
+                    <div class="basket__top-wrap">
+                        <h2 class="basket__title">Корзина</h2>
+                        <a id="basketCloseIcon" href="" class="basket__top-icon">
+                            <img src="img/Vector116.svg" alt="" class="basket__icon-top-img">
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="basket__goods-wrap">
+                        <p class="basket__title-empty">Корзина пуста</p>
+                        <ul class="basket__goods-list">
+                            <!-- <li class="basket__goods-item">
+                                <div class="basket__card__top-wrap">
+                                    <img src="img/Rectangle441.png" alt="" class="basket__card-img">
+                                    <p class="basket__card-text">Футболка стандартная, красная, круглый воротник...</p>
+                                    <a href="" class="basket__card-icon">
+                                        <img src="img/Vector116.svg" alt="" class="basket__card-icon-img">
+                                    </a>
+                                </div>
+                                <div class="basket__card__footer-wrap">
+                                    <button class="basket__card-btnM">-</button>
+                                    <input type="number" class="basket__card-quantity" value="1" min="1">
+                                    <button class="basket__card-btnP">+</button>
+                                    <div class="basket__card-total-wrap">
+                                        <p class="basket__card-total"><span class="card--price">$5.75</span></p>
+                                    </div>
+                                </div>
+                            </li> -->
+                            
+                            
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="basket__footer">
+                        <button id="basketContinueBtn"  class="basket__footer-exitBtn">Продолжить покупки</button>
+                        <div class="basket__footer-sum-wrap">
+                            <p class="basket__footer-sum">$ 0.00</p>
+                            <button class="basket__footer-sumBtn">Оформить заказ</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="header__hero">
+                <h2 class="header__title-info">&ensp;Фирменные принты на одежде</h2>
+                <h1 class="header__title">Gummi.Print</h1>
+                <button class="button header__hero-button"><a href="#catalog">Смотреть каталог</a></button>
+                <div class="hero__link-wrap">
+                    <a href="#catalog" class="header__hero-link">
+                        <img src="img/Group 147.svg" alt="" class="header__hero-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="catalog"><a name="catalog"></a>
+            <div class="catalog__title-wrap">
+
+                <div class="catalog__search-wrap">
+
+                    <div class="container catalog__search-items--wrap">
+                        <h1 class="catalog__title"></a>Каталог</h1>
+                        <form action="" class="catalog__search-form"></form>
+                        <div class="d3">
+                            <input type="text" name="catalog__search" class="catalog__search" placeholder="Поиск">
+                            <input type="submit" id="catalog__search-submit" value="" src="img/123.svg">
+                            <label for="catalog__search-submit" class="catalog__search-submit--label"><img
+                                    src="img/123.svg" alt="" class="catalog__search-submit--img"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container catalog__navigation-wrap">
+
+
+                <div class="catalog__navigation-form--wrap">
+                    <form action="" class="catalog__navigation-form">
+
+                        <button id="catalogBtnUkn" class="catalog__navigation-btnUnk"><img src="img/66.svg" alt="icon"
+                                class="catalog__navigation-btnUnk-img"></button>
+
+                        <button id="catalogFilterBtn"
+                            class="catalog__navigation-btn catalog__navigation-btn--active ">Фильтры<img
+                                src="img/Vector116.svg" alt="" class="catalog__navigation-btn-img hidden "></button>
+
+                        <input type="radio" class="catalog__navigation-input" id="tShirts1" name="contact"
+                            value="Футболки">
+                        <label class="catalog__navigation-item catalog__navigation-item--active"
+                            for="tShirts1">Футболки</label>
+
+                        <input type="radio" class="catalog__navigation-input" id="tShirts2" name="contact"
+                            value="Толстовки">
+                        <label class="catalog__navigation-item" for="tShirts2">Толстовки</label>
+
+                        <input type="radio" class="catalog__navigation-input" id="tShirts3" name="contact"
+                            value="Cвитера">
+                        <label class="catalog__navigation-item" for="tShirts3">Cвитера</label>
+
+                        <input type="radio" class="catalog__navigation-input" id="tShirts4" name="contact"
+                            value="Кепки">
+                        <label class="catalog__navigation-item" for="tShirts4">Кепки</label>
+
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="container catalog__container">
+                <aside class="catalog__sidebar ">
+
+
+                    <div class="catalog__sidebar-form--wrap"></div>
+                    <form action="" class="catalog__navigation-form">
+
+                        <div class="catalog__sidebar-item catalog__sidebar-item--color">
+                            <p class="catalog__sidebar-title">Цвет</p>
+                            <div class="catalog__sidebar--color-wrap">
+                                <input type="radio" class="sidebar__color-input" id="colorDefault" name="color"
+                                    value="Футболки">
+                                <label for="colorDefault"
+                                    class="sidebar__color-label sidebar__color-label--Default"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorWhite" name="color"
+                                    value="Толстовки">
+                                <label for="colorWhite"
+                                    class="sidebar__color-label sidebar__color-label--White"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorBlack" name="color"
+                                    value="Cвитера">
+                                <label for="colorBlack"
+                                    class="sidebar__color-label sidebar__color-label--Black"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorGray" name="color"
+                                    value="Кепки">
+                                <label for="colorGray" class="sidebar__color-label sidebar__color-label--Gray"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorBlue" name="color"
+                                    value="Blue">
+                                <label for="colorBlue" class="sidebar__color-label sidebar__color-label--Blue"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorDarkBlue" name="color"
+                                    value="DarkBlue">
+                                <label for="colorDarkBlue"
+                                    class="sidebar__color-label sidebar__color-label--DarkBlue"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorPink" name="color"
+                                    value="Pink">
+                                <label for="colorPink" class="sidebar__color-label sidebar__color-label--Pink"></label>
+                            </div>
+                            <div class="catalog__sidebar--color-wrap">
+                                <input type="radio" class="sidebar__color-input" id="colorYellow" name="color"
+                                    value="Yellow">
+                                <label for="colorYellow"
+                                    class="sidebar__color-label sidebar__color-label--Yellow"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorOrange" name="color"
+                                    value="Orange">
+                                <label for="colorOrange"
+                                    class="sidebar__color-label sidebar__color-label--Orange"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorPurple" name="color"
+                                    value="Purple">
+                                <label for="colorPurple"
+                                    class="sidebar__color-label sidebar__color-label--Purple"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorRed" name="color" value="Red">
+                                <label for="colorRed" class="sidebar__color-label sidebar__color-label--Red"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorGreen" name="color"
+                                    value="Green">
+                                <label for="colorGreen"
+                                    class="sidebar__color-label sidebar__color-label--Green"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorDarkGreen" name="color"
+                                    value="DarkGreen">
+                                <label for="colorDarkGreen"
+                                    class="sidebar__color-label sidebar__color-label--DarkGreen"></label>
+
+                                <input type="radio" class="sidebar__color-input" id="colorBrown" name="color"
+                                    value="Brown">
+                                <label for="colorBrown"
+                                    class="sidebar__color-label sidebar__color-label--Brown"></label>
+
+                            </div>
+                        </div>
+                        <div class="catalog__sidebar-item catalog__sidebar-item--size">
+                            <p class="catalog__sidebar-title">Размер</p>
+                            <div class="catalog__sidebar--size-wrap">
+                                <input type="radio" class="sidebar__size-input" id="sizeXS" name="sizeXS" value="XS">
+                                <label for="sizeXS" class="color-border sidebar__size-label sidebar-label  ">XS</label>
+
+                                <input type="radio" class="sidebar__size-input" id="sizeS" name="sizeS" value="S" M>
+                                <label for="sizeS" class="color-border sidebar__size-label sidebar-label">S</label>
+
+                                <input type="radio" class="sidebar__size-input" id="sizeM" name="sizeM" value="M">
+                                <label for="sizeM" class="color-border sidebar__size-label  sidebar-label">M</label>
+
+                                <input type="radio" class="sidebar__size-input" id="sizeL" name="sizeL" value="L">
+                                <label for="sizeL" class="color-border sidebar__size-label sidebar-label">L</label>
+
+                                <input type="radio" class="sidebar__size-input" id="sizeXL" name="sizeXL" value="XL">
+                                <label for="sizeXL" class="color-border sidebar__size-label sidebar-label">XL</label>
+
+                                <input type="radio" class="sidebar__size-input" id="sizeXXL" name="sizeXXL" value="XXL">
+                                <label for="sizeXXL" class="color-border sidebar__size-label sidebar-label">XXL</label>
+                            </div>
+                        </div>
+                        <div class="catalog__sidebar-item catalog__sidebar-item--sex">
+                            <p class="catalog__sidebar-title">Пол</p>
+                            <div class="catalog__sidebar--sex-wrap">
+                                <input type="radio" class="sidebar__sex-input" id="sexM" name="sexM" value="M">
+                                <label for="sexM" class="color-border sidebar__sex-label sidebar-label">М</label>
+
+                                <input type="radio" class="sidebar__sex-input" id="sexW" name="sexW" value="W">
+                                <label for="sexW" class="color-border sidebar__sex-label sidebar-label">Ж</label>
+
+                                <input type="radio" class="sidebar__sex-input" id="sexB" name="sexB" value="B">
+                                <label for="sexB" class="color-border sidebar__sex-label  sidebar-label">Для обеих
+                                    полов</label>
+                            </div>
+                        </div>
+                        <div class="catalog__sidebar-item catalog__sidebar-item--features">
+                            <p class="catalog__sidebar-title">Особенности</p>
+                            <div class="catalog__sidebar--features-wrap">
+                                <input type="checkbox" class="sidebar__features-input" id="featuresRound"
+                                    name="featuresxRound" value="Round">
+                                <label for="featuresRound"
+                                    class="color-border sidebar__features-label  sidebar-label">Круглый воротник</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresV" name="featuresV"
+                                    value="V">
+                                <label for="featuresV"
+                                    class="color-border sidebar__features-label sidebar-label">V-Образный
+                                    воротник</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresUSA"
+                                    name="featuresUSA" value="USA">
+                                <label for="featuresUSA" class="color-border sidebar__features-label sidebar-label">Made
+                                    in usa</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresMilitary"
+                                    name="featuresMilitary" value="Military">
+                                <label for="featuresMilitary"
+                                    class="color-border sidebar__features-label sidebar-label">Военная ткань</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresPocket"
+                                    name="featuresPocket" value="Pocket">
+                                <label for="featuresPocket"
+                                    class="color-border sidebar__features-label  sidebar-label">Карманы</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresHood"
+                                    name="featuresHood" value="Hood">
+                                <label for="featuresHood"
+                                    class="color-border sidebar__features-label sidebar-label">Капюшон</label>
+
+                                <input type="checkbox" class="sidebar__features-input" id="featuresSoft"
+                                    name="featuresSoft" value="Soft">
+                                <label for="featuresSoft"
+                                    class="color-border sidebar__features-label sidebar-label">Мягкая ткань</label>
+                            </div>
+                        </div>
+
+                        <div class="catalog__sidebar-item catalog__sidebar-item--brand">
+                            <p class="catalog__sidebar-title">Бренд</p>
+                            <div class="catalog__sidebar--brand-wrap">
+                                <input type="checkbox" class="sidebar__brand-input" id="brandAlternativeApparel"
+                                    name="brandAlternativeApparel" value="AlternativeApparel">
+                                <label for="brandAlternativeApparel"
+                                    class="color-border sidebar__brand-label sidebar-label">Alternative Apparel</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandAmericanApparel"
+                                    name="brandAmericanApparel" value="AmericanApparel">
+                                <label for="brandAmericanApparel"
+                                    class="color-border sidebar__brand-label sidebar-label">AmericanApparel</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandCanvas" name="brandCanvas"
+                                    value="Canvas">
+                                <label for="brandCanvas"
+                                    class="color-border sidebar__brand-label sidebar-label">Canvas</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandAugustaSportswear"
+                                    name="brandAugustaSportswear" value="AugustaSportswear">
+                                <label for="brandAugustaSportswear"
+                                    class="color-border sidebar__brand-label sidebar-label">Augusta Sportswear</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandHanes" name="brandHanes"
+                                    value="Hanes">
+                                <label for="brandHanes"
+                                    class="color-border sidebar__brand-label sidebar-label">Hanes</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandNextLevel"
+                                    name="brandNextLevel" value="NextLevel">
+                                <label for="brandNextLevel" class="color-border sidebar__brand-label sidebar-label">Next
+                                    level</label>
+
+                                <input type="checkbox" class="sidebar__brand-input" id="brandSportTek"
+                                    name="brandSportTek" value="SportTek">
+                                <label for="brandSportTek" class="color-border sidebar__brand-label sidebar-label">Sport
+                                    Tek</label>
+                            </div>
+                            <button class="brandBtn">Ещё</button>
+                        </div>
+
+                    </form>
+                    <p class="sidebar__text"><span class="sidebar__text-first">*</span>Финальная цена может отличаться в
+                        зависимости от выбраного цвета, формы и
+                        размера</p>
+                </aside>
+                <div class="catalog__block-wrap tShirt ">
+                    <div class="catalog__block-item">
+                        <ul class="catalog__block-list">
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle441.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle442.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle443.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog__block-item">
+                        <ul class="catalog__block-list">
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle444.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle445.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle446.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog__block-item">
+                        <ul class="catalog__block-list">
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle442.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle447.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle445.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog__block-item">
+                        <ul class="catalog__block-list">
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle411.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle411.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="catalog__card product--card">
+
+                                <img src="img/Rectangle411.png" alt="" class="catalog__card-img card--img">
+                                <p class="catalog__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="catalog__card-price"><span class="catalog__card-price--print-option">Цена без
+                                        принта: </span><span class="card--price">$5.75</span></p>
+                                <button class="catalog__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="goods__pagination-wrap goods__pagination-wrap2">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="pagination-item">
+                                    <a class="pagination-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><img src="img/Vector 11.svg" alt=""
+                                                class="goods__pagination--prev"></span>
+                                    </a>
+                                </li>
+                                <li class="pagination-item"><a class="pagination-link pagination--active" href="#">1</a>
+                                </li>
+                                <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+                                <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+                                <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+                                <li class="pagination-item"><a class="pagination-link" href="#">11</a></li>
+                                <li class="pagination-item"><a class="pagination-link" href="#">12</a></li>
+                                <li class="pagination-item">
+                                    <a class="pagination-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><img src="img/Vector 12.svg" alt=""
+                                                class="goods__pagination--next"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="catalog__block-wrap hoody hidden"></div>
+                <div class="catalog__block-wrap sweater hidden"></div>
+                <div class="catalog__block-wrap cap hidden"></div>
+
+
+            </div>
+
+
+
+        </section>
+        <hr>
+        <section class="goods">
+            <div class="goods__container container">
+                <h2 class="goods__title">Готовый мерч</h2>
+                <div class="goods__block-wrap">
+                    <div class="goods__block-item">
+                        <ul class="goods__block-list">
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle41.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle42.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle43.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle41.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="goods__block-item">
+                        <ul class="goods__block-list">
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle43.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle44.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle42.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle43.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="goods__block-item">
+                        <ul class="goods__block-list">
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle44.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle43.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle41.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                            <li class="goods__card product--card">
+
+                                <img src="img/Rectangle44.png" alt="" class="goods__card-img  card--img">
+                                <p class="goods__card-text card--text">Футболка стандартная, красная, круглый воротник...</p>
+                                <p class="goods__card-price card--price">$3.95</p>
+                                <button class="goods__card-button card-button">Выбрать</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="goods__pagination-wrap">
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true"><img src="img/Vector 11.svg" alt=""
+                                            class="goods__pagination--prev"></span>
+                                </a>
+                            </li>
+                            <li class="pagination-item"><a class="pagination-link pagination--active" href="#">1</a>
+                            </li>
+                            <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+                            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+                            <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+                            <li class="pagination-item"><a class="pagination-link" href="#">11</a></li>
+                            <li class="pagination-item"><a class="pagination-link" href="#">12</a></li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true"><img src="img/Vector 12.svg" alt=""
+                                            class="goods__pagination--next"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="info"><a name="about"></a>
+            <div class="container info__container">
+                <div class="info__text">
+                    <h2 class="info__title">Gummi Print - Это</h2>
+                    <div class="info__text-box">
+                        <p class="info__text-item">Контроль качества высокого уровня</p>
+                        <p class="info__text-item">Удобная и быстрая доставка</p>
+                        <p class="info__text-item">Возможность кастомной печати </p>
+                        <p class="info__text-item">Лучший дизайн на рынке</p>
+                    </div>
+                    <button class="info__button">Создать принт</button>
+                </div>
+                <div class="info__picture">
+                    <img src="img/image2.png" alt="" class="info__img">
+                </div>
+            </div>
+        </section>
+
+        <section class="service">
+            <div class="container service__container">
+                <h2 class="service__title">Наши услуги</h2>
+                <div class="service__block-wrap">
+                    <div class="service__block-item service__block-item-top">
+                        <div class="service__text-box-wrap">
+                            <div class="service__text-box service__text-box-top">
+                                <div class="service__text-content-top">
+                                    <h3 class="service__block-title">Индивидуальная печать</h3>
+                                    <p class="service__block-text">Печать Ваших макетов на футболке, майке, толстовке,
+                                        свитшоте,
+                                        тениске-поло, шортах, штанах, кепке, шапке, детской футболке, чашке</p>
+                                    <button class="service__block-button">Создать принт</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service__picture">
+                            <img src="img/image 3.png" alt="" class="service__img">
+                        </div>
+                    </div>
+                    <div class="service__block-item service__block-item-center">
+
+                        <div class="service__text-box-wrap">
+                            <div class="service__text-box service__text-box-center">
+                                <div class="service__text-content-center">
+                                    <h3 class="service__block-title">Тиражная печать для организаций</h3>
+                                    <p class="service__block-text">Печать фирменного стиля для организаций на любых
+                                        изделиях
+                                    </p>
+                                    <button class="service__block-button">Создать принт</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service__picture">
+                            <img src="img/image 4.png" alt="" class="service__img">
+                        </div>
+
+                    </div>
+                    <div class="service__block-item service__block-item-bottom">
+                        <div class="service__text-box-wrap">
+                            <div class="service__text-box service__text-box-bottom">
+                                <div class="service__text-content-bottom">
+                                    <h3 class="service__block-title">Пошив одежды</h3>
+                                    <p class="service__block-text">Пошив одежды для взрослых и детей с любым рисунком
+                                        принимаем
+                                        тиражом от 20 единиц</p>
+                                    <button class="service__block-button">Создать принт</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service__picture">
+                            <img src="img/image 5.png" alt="" class="service__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><a name="contacts"></a>
+        <div class="container footer__container">
+            <h2 class="footer__title-info">&ensp;Фирменные принты на одежде</h2>
+            <h1 class="footer__title">Gummi.Print</h1>
+            <div class="footer__list">
+                <div class="footer__social">
+                    <h3 class="footer__list-title">Соцсети</h3>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item"><a href="" class="footer__social-link"><img src="img/9.svg"
+                                    alt="" class="footer__social-img">Инстаграм</a></li>
+                        <li class="footer__social-item"><a href="" class="footer__social-link"><img src="img/8.svg"
+                                    alt="" class="footer__social-img">Телеграм</a></li>
+                        <li class="footer__social-item"><a href="" class="footer__social-link"><img src="img/7.svg"
+                                    alt="" class="footer__social-img">Вайбер</a></li>
+                        <li class="footer__social-item"><a href="" class="footer__social-link"><img src="img/6.svg"
+                                    alt="" class="footer__social-img">Facebook</a></li>
+                        <li class="footer__social-item"><a href="" class="footer__social-link"><img src="img/Vector.svg"
+                                    alt="" class="footer__social-img">E-mail</a></li>
+                    </ul>
+                </div>
+                <div class="footer__phone">
+                    <h3 class="footer__list-title">Телефон</h3>
+                    <span class="footer__phone-tel">+38(099) 386 74 53</span>
+                    <span class="footer__phone-tel">+38(099) 386 74 53</span>
+                    <button class="footer__phone-button">Заказать звонок</button>
+                </div>
+                <div class="footer__menu">
+                    <h3 class="footer__list-title">Меню</h3>
+                    <nav class="footer__navigation">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item"><a href="#main" class="footer__menu-link">Главная</a></li>
+                            <li class="footer__menu-item"><a href="#about" class="footer__menu-link">О нас</a></li>
+                            <li class="footer__menu-item"><a href="#contacts" class="footer__menu-link">Контакты</a></li>
+                            <li class="footer__menu-item"><a href="#catalog" class="footer__menu-link">Каталог</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script> -->
+</body>
+
+</html>

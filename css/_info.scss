@@ -1,0 +1,80 @@
+.info {
+
+    display: flex;
+    color: #FFFFFF;
+    background-color: $main-dark;
+    background: rgba(21, 15, 45, 0.3);
+    background-image: url('../img/image6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    // background-image:url(../img/image2.png);
+
+    &__container {
+        @extend %space-between
+    }
+
+   
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+        margin-top:83px;
+        margin-bottom:13px;
+
+        
+
+    }
+
+    &__text-item {
+
+        font-size: 17px;
+        line-height: 21px;
+        /* identical to box height */
+
+        text-decoration-line: underline;
+        margin-top: 87px;
+        &::before {
+            content: url(../img/Vector137.svg);
+            width: 24px;
+            height: 16px;
+            margin-right: 24px;
+        }
+    }
+
+
+
+    &__text, &__picture{
+        width: 48%;
+    }
+
+    &__picture{
+        height: 100%;
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+    &__button {
+
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+
+        color: #000000;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding: 17.5px 32px;
+        margin:108px 0;
+    }
+
+
+}
+
