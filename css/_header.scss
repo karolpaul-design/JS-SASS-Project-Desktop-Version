@@ -81,6 +81,9 @@
         width: 427px;
         font-size: 16px;
         line-height: 20px;
+         &-link{
+            color:white;
+        }
     }
 
     &__select {
@@ -159,14 +162,14 @@
             margin-bottom: 5px;
             background-image: url(../img/Group143.svg);
             background-position: left;
-    background-repeat: no-repeat;
-    width: 41px;
-    height: 36px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    background-position-y: 5px;
-    background-size: 22px;
+            background-repeat: no-repeat;
+            width: 41px;
+            height: 36px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background-position-y: 5px;
+            background-size: 22px;
             
         }
 
@@ -270,6 +273,9 @@
             border-radius: 5px;
 
             margin-bottom: 60px;
+            &-link{
+                color:#3D3D3D;
+            }
         }
     }
 }
